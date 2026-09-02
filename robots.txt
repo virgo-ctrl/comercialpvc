@@ -1,0 +1,32 @@
+# Domínio placeholder (comercialpvc.com.br) — atualizar antes de publicar
+
+User-agent: *
+Allow: /
+Disallow: /style-guide.html
+
+# Bots de IA (Answer/Generative Engine Optimization) — liberados de propósito
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://comercialpvc.com.br/sitemap.xml

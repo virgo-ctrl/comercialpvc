@@ -1,0 +1,62 @@
+/*
+  Design tokens — Comercial PVC
+  Fonte única de verdade pra cor, tipografia, espaçamento e raio.
+  Qualquer página nova do site (LP, blog, institucional) deve importar este arquivo
+  antes de qualquer CSS próprio, e usar var(--token) em vez de valor solto.
+*/
+
+:root{
+  /* ---- Cor: base ---- */
+  --ink:#1C1A17;         /* texto principal / fundo de seções escuras */
+  --ink-2:#2A2620;       /* fundo escuro secundário (rodapé, cards escuros) */
+  --cream:#F7F3EC;       /* fundo padrão claro */
+  --cream-2:#EFE6D4;     /* fundo claro alternado / cards claros */
+  --line:#E4DACB;        /* bordas e divisores sobre fundo claro */
+
+  /* ---- Cor: acento ---- */
+  --gold:#D9A441;        /* CTA, destaque de texto, ícones sobre fundo escuro */
+  --gold-dark:#B9862E;   /* hover de CTA, destaque de texto sobre fundo claro */
+
+  /* ---- Cor: texto ---- */
+  --white:#FFFFFF;
+  --text-soft:#6B6259;              /* texto secundário sobre fundo claro */
+  --text-soft-light:rgba(247,243,236,.72); /* texto secundário sobre fundo escuro */
+
+  /* ---- Tipografia ---- */
+  --font-display:'Sora', system-ui, sans-serif;   /* títulos, headlines, números */
+  --font-body:'Inter', system-ui, sans-serif;      /* corpo de texto, labels, botões */
+
+  --fs-h1:56px;    /* hero headline — 36px no mobile */
+  --fs-h2:34px;    /* título de seção — 26px no mobile */
+  --fs-h3:18px;    /* título de card */
+  --fs-body:16px;  /* corpo padrão — nunca ir abaixo de 16px (acessibilidade) */
+  --fs-small:13px; /* legendas, microcopy */
+
+  /* ---- Espaçamento (escala base 4px) ---- */
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:48px;
+  --space-8:64px;
+  --space-9:96px;   /* padding vertical de section desktop */
+  --space-9-mobile:64px;
+
+  /* ---- Raio ---- */
+  --radius-sm:8px;   /* inputs, botões pequenos */
+  --radius-md:16px;  /* cards */
+  --radius-lg:22px;  /* imagens grandes, blocos de destaque */
+  --radius-xl:28px;  /* seções inteiras (CTA final, processo) */
+  --radius-pill:999px; /* botões, badges, kicker */
+
+  /* ---- Sombra ---- */
+  --shadow-float:0 6px 18px rgba(0,0,0,.3); /* botão flutuante, elementos sobrepostos */
+}
+
+/*
+  Breakpoint padrão do site: 900px (mobile abaixo, desktop acima).
+  Não existe custom media universal sem build step, então cada página replica
+  esse valor no próprio @media — manter os dois em sincronia manualmente.
+*/

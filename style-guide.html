@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System — Comercial PVC (referência interna)</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;padding:56px 24px 96px;}
+  .wrap{max-width:1040px;margin:0 auto;}
+  h1{font-family:'Sora',sans-serif;font-size:34px;margin-bottom:6px;}
+  .sub{color:var(--text-soft);font-size:15px;margin-bottom:56px;}
+  h2{font-family:'Sora',sans-serif;font-size:20px;margin:56px 0 20px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+  h2:first-of-type{margin-top:0;}
+
+  .swatch-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px;}
+  .swatch{border-radius:12px;overflow:hidden;border:1px solid var(--line);}
+  .swatch-color{height:70px;}
+  .swatch-label{background:var(--white);padding:10px 12px;font-size:12px;}
+  .swatch-label strong{display:block;font-family:monospace;font-size:11px;}
+
+  .type-row{display:flex;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);}
+  .type-row .tag{font-size:12px;color:var(--text-soft);width:110px;flex-shrink:0;font-family:monospace;}
+  .type-h1{font-family:'Sora',sans-serif;font-weight:700;font-size:var(--fs-h1);}
+  .type-h2{font-family:'Sora',sans-serif;font-weight:700;font-size:var(--fs-h2);}
+  .type-h3{font-family:'Sora',sans-serif;font-weight:600;font-size:var(--fs-h3);}
+  .type-body{font-family:'Inter',sans-serif;font-size:var(--fs-body);}
+  .type-small{font-family:'Inter',sans-serif;font-size:var(--fs-small);color:var(--text-soft);}
+
+  .space-row{display:flex;align-items:center;gap:16px;padding:8px 0;}
+  .space-bar{background:var(--gold);height:14px;border-radius:3px;}
+  .space-row .tag{font-size:12px;font-family:monospace;color:var(--text-soft);width:130px;flex-shrink:0;}
+
+  .radius-row{display:flex;gap:20px;flex-wrap:wrap;}
+  .radius-item{text-align:center;}
+  .radius-box{width:80px;height:80px;background:var(--cream-2);border:1px solid var(--line);margin-bottom:8px;}
+  .radius-item span{font-size:11px;font-family:monospace;color:var(--text-soft);}
+
+  .comp-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:20px;}
+
+  /* componentes replicados do site real */
+  .btn-gold{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;font-size:15px;padding:16px 30px;border-radius:var(--radius-pill);text-decoration:none;border:none;cursor:pointer;}
+  .btn-ghost-light{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;border-bottom:2px solid var(--gold);padding-bottom:2px;}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gold-dark);background:var(--cream-2);border-radius:999px;padding:7px 16px;}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-dark);}
+  .badge-dark{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gold);background:var(--ink);border:1px solid rgba(217,164,65,.35);border-radius:999px;padding:7px 16px;}
+  .card-light{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-md);padding:24px;max-width:260px;}
+  .card-dark{background:var(--ink);color:var(--white);border-radius:var(--radius-md);padding:24px;max-width:220px;}
+  .stat-arrow{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .faq-demo{border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px 20px;max-width:400px;font-family:'Sora',sans-serif;font-weight:600;font-size:15px;display:flex;justify-content:space-between;}
+  input.demo{width:220px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius-sm);font-size:15px;font-family:inherit;background:var(--cream);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Design System — Comercial PVC</h1>
+  <p class="sub">Referência interna (não indexada, não é uma página pública). Fonte dos tokens: <code>tokens.css</code>. Qualquer página nova do site (LP, blog, institucional) deve puxar esse arquivo antes de escrever CSS próprio.</p>
+
+  <h2>Cor — base</h2>
+  <div class="swatch-row">
+    <div class="swatch"><div class="swatch-color" style="background:var(--ink)"></div><div class="swatch-label"><strong>--ink</strong>#1C1A17</div></div>
+    <div class="swatch"><div class="swatch-color" style="background:var(--ink-2)"></div><div class="swatch-label"><strong>--ink-2</strong>#2A2620</div></div>
+    <div class="swatch"><div class="swatch-color" style="background:var(--cream)"></div><div class="swatch-label"><strong>--cream</strong>#F7F3EC</div></div>
+    <div class="swatch"><div class="swatch-color" style="background:var(--cream-2)"></div><div class="swatch-label"><strong>--cream-2</strong>#EFE6D4</div></div>
+    <div class="swatch"><div class="swatch-color" style="background:var(--line)"></div><div class="swatch-label"><strong>--line</strong>#E4DACB</div></div>
+  </div>
+
+  <h2>Cor — acento</h2>
+  <div class="swatch-row">
+    <div class="swatch"><div class="swatch-color" style="background:var(--gold)"></div><div class="swatch-label"><strong>--gold</strong>#D9A441</div></div>
+    <div class="swatch"><div class="swatch-color" style="background:var(--gold-dark)"></div><div class="swatch-label"><strong>--gold-dark</strong>#B9862E</div></div>
+  </div>
+
+  <h2>Tipografia</h2>
+  <div class="type-row"><span class="tag">--fs-h1 / 56px</span><span class="type-h1">Sua parede vira outra</span></div>
+  <div class="type-row"><span class="tag">--fs-h2 / 34px</span><span class="type-h2">Título de seção</span></div>
+  <div class="type-row"><span class="tag">--fs-h3 / 18px</span><span class="type-h3">Título de card</span></div>
+  <div class="type-row"><span class="tag">--fs-body / 16px</span><span class="type-body">Corpo de texto padrão, nunca abaixo de 16px.</span></div>
+  <div class="type-row"><span class="tag">--fs-small / 13px</span><span class="type-small">Legenda / microcopy</span></div>
+  <p class="type-small" style="margin-top:16px;">Display: Sora (600–800) · Corpo: Inter (400–700)</p>
+
+  <h2>Espaçamento (escala 4px)</h2>
+  <div class="space-row"><span class="tag">--space-2 / 8px</span><div class="space-bar" style="width:8px"></div></div>
+  <div class="space-row"><span class="tag">--space-4 / 16px</span><div class="space-bar" style="width:16px"></div></div>
+  <div class="space-row"><span class="tag">--space-5 / 24px</span><div class="space-bar" style="width:24px"></div></div>
+  <div class="space-row"><span class="tag">--space-6 / 32px</span><div class="space-bar" style="width:32px"></div></div>
+  <div class="space-row"><span class="tag">--space-7 / 48px</span><div class="space-bar" style="width:48px"></div></div>
+  <div class="space-row"><span class="tag">--space-9 / 96px</span><div class="space-bar" style="width:96px"></div></div>
+
+  <h2>Raio</h2>
+  <div class="radius-row">
+    <div class="radius-item"><div class="radius-box" style="border-radius:var(--radius-sm)"></div><span>--radius-sm 8px</span></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:var(--radius-md)"></div><span>--radius-md 16px</span></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:var(--radius-lg)"></div><span>--radius-lg 22px</span></div>
+    <div class="radius-item"><div class="radius-box" style="border-radius:var(--radius-pill)"></div><span>--radius-pill</span></div>
+  </div>
+
+  <h2>Componentes — botões e badges</h2>
+  <div class="comp-row">
+    <a class="btn-gold" href="#">Botão primário (CTA)</a>
+    <a class="btn-ghost-light" href="#">Link com sublinhado dourado</a>
+    <span class="kicker">Kicker / eyebrow</span>
+    <span class="badge-dark">Badge sobre fundo escuro</span>
+  </div>
+
+  <h2>Componentes — cards</h2>
+  <div class="comp-row">
+    <div class="card-light"><h3 style="font-family:'Sora',sans-serif;font-size:17px;margin-bottom:6px;">Card claro</h3><p style="font-size:14px;color:var(--text-soft);">Usado nos cards de produto e depoimento.</p></div>
+    <div class="card-dark">
+      <div style="display:flex;justify-content:space-between;"><span style="font-family:'Sora',sans-serif;font-size:26px;font-weight:700;">14,7K</span><span class="stat-arrow">↗</span></div>
+      <span style="font-size:12px;color:var(--text-soft-light);">Card escuro de estatística</span>
+    </div>
+  </div>
+
+  <h2>Componentes — formulário e FAQ</h2>
+  <div class="comp-row">
+    <input class="demo" placeholder="Campo de input">
+    <div class="faq-demo">Pergunta de FAQ <span>+</span></div>
+  </div>
+
+  <h2>Regras de uso</h2>
+  <ul style="padding-left:20px;font-size:14px;color:var(--text-soft);line-height:1.8;">
+    <li>Nunca usar cor sólida direto no CSS de página — sempre var(--token) puxado de <code>tokens.css</code>.</li>
+    <li>Corpo de texto nunca abaixo de 16px (acessibilidade), mesmo em mobile.</li>
+    <li>Contraste mínimo 4.5:1 — texto sobre <code>--ink</code> usa <code>--white</code> ou <code>--text-soft-light</code>, nunca <code>--gold</code> puro em corpo de texto longo (só em destaque curto).</li>
+    <li>Botão primário é sempre pill (<code>--radius-pill</code>) e cor <code>--gold</code>, hover <code>--gold-dark</code>.</li>
+    <li>Seções dividem fundo claro (<code>--cream</code>) e blocos escuros (<code>--ink</code>) — nunca dois blocos escuros seguidos sem uma seção clara entre eles, pra manter ritmo visual.</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Logs
+server.log
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db

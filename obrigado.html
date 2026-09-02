@@ -44,9 +44,11 @@
   .vendedor-btn:hover{border-color:var(--gold);}
   .vendedor-left{display:flex;align-items:center;gap:14px;}
   .vendedor-avatar{
-    width:42px;height:42px;border-radius:50%;background:var(--cream-2);
+    width:48px;height:48px;border-radius:50%;background:var(--cream-2);
     display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text-soft);flex-shrink:0;
+    overflow:hidden;
   }
+  .vendedor-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
   .vendedor-name{font-family:'Sora',sans-serif;font-weight:600;font-size:15px;display:block;}
   .vendedor-role{font-size:13px;color:var(--text-soft);}
   .wa-pill{
@@ -74,50 +76,40 @@
   <p class="intro">Clique no vendedor disponível pra continuar a conversa direto no WhatsApp.</p>
 
   <div class="vendedores">
-    <a class="vendedor-btn" href="https://wa.me/5581995531114?text=Oi!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener" style="border-color:var(--gold);background:var(--white);">
+    <a class="vendedor-btn" href="https://wa.me/5581982138063?text=Oi%2C%20Andrea!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
       <span class="vendedor-left">
-        <span class="vendedor-avatar" style="background:var(--gold);color:var(--ink);font-weight:bold;">⭐</span>
-        <span><span class="vendedor-name">Atendimento Comercial PVC (Loja Física)</span><span class="vendedor-role">WhatsApp Central • (81) 99553-1114</span></span>
-      </span>
-      <span class="wa-pill">💬 Falar Agora</span>
-    </a>
-
-    <a class="vendedor-btn" href="#" onclick="console.warn('[PENDENTE] Número do Vendedor 1 ainda não confirmado — atualizar antes de publicar.'); return false;" style="opacity:.6;cursor:not-allowed;" title="Número ainda não confirmado">
-      <span class="vendedor-left">
-        <span class="vendedor-avatar">👤</span>
-        <span><span class="vendedor-name">[Nome do Vendedor 1]</span><span class="vendedor-role">Vendas</span></span>
+        <span class="vendedor-avatar"><img src="images/vendedora-andrea.png" alt="Foto de Andrea"></span>
+        <span><span class="vendedor-name">Andrea</span><span class="vendedor-role">Vendedora</span></span>
       </span>
       <span class="wa-pill">💬 WhatsApp</span>
     </a>
 
-    <a class="vendedor-btn" href="#" onclick="console.warn('[PENDENTE] Número do Vendedor 2 ainda não confirmado — atualizar antes de publicar.'); return false;" style="opacity:.6;cursor:not-allowed;" title="Número ainda não confirmado">
+    <a class="vendedor-btn" href="https://wa.me/5581981851293?text=Oi%2C%20Lucas!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
       <span class="vendedor-left">
-        <span class="vendedor-avatar">👤</span>
-        <span><span class="vendedor-name">[Nome do Vendedor 2]</span><span class="vendedor-role">Vendas</span></span>
+        <span class="vendedor-avatar"><img src="images/vendedor-lucas.png" alt="Foto de Lucas"></span>
+        <span><span class="vendedor-name">Lucas</span><span class="vendedor-role">Vendedor</span></span>
       </span>
       <span class="wa-pill">💬 WhatsApp</span>
     </a>
 
-    <a class="vendedor-btn" href="#" onclick="console.warn('[PENDENTE] Número do Vendedor 3 ainda não confirmado — atualizar antes de publicar.'); return false;" style="opacity:.6;cursor:not-allowed;" title="Número ainda não confirmado">
+    <a class="vendedor-btn" href="https://wa.me/5581995551114?text=Oi%2C%20Karol!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
       <span class="vendedor-left">
-        <span class="vendedor-avatar">👤</span>
-        <span><span class="vendedor-name">[Nome do Vendedor 3]</span><span class="vendedor-role">Vendas</span></span>
+        <span class="vendedor-avatar"><img src="images/vendedora-karol.png" alt="Foto de Karol"></span>
+        <span><span class="vendedor-name">Karol</span><span class="vendedor-role">Vendedora</span></span>
       </span>
       <span class="wa-pill">💬 WhatsApp</span>
     </a>
 
-    <a class="vendedor-btn" href="#" onclick="console.warn('[PENDENTE] Número do Vendedor 4 ainda não confirmado — atualizar antes de publicar.'); return false;" style="opacity:.6;cursor:not-allowed;" title="Número ainda não confirmado">
+    <a class="vendedor-btn" href="https://wa.me/5581981713559?text=Oi%2C%20Jaciel!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
       <span class="vendedor-left">
-        <span class="vendedor-avatar">👤</span>
-        <span><span class="vendedor-name">[Nome do Vendedor 4]</span><span class="vendedor-role">Vendas</span></span>
+        <span class="vendedor-avatar"><img src="images/vendedor-jaciel.png" alt="Foto de Jaciel"></span>
+        <span><span class="vendedor-name">Jaciel</span><span class="vendedor-role">Vendedor</span></span>
       </span>
       <span class="wa-pill">💬 WhatsApp</span>
     </a>
   </div>
 
   <a class="back" href="index.html">← Voltar pro site</a>
-
-  <div class="note">🔧 PROTÓTIPO — nomes e números dos 4 vendedores são placeholder. Pra publicar de verdade, troque cada <code>onclick</code> por <code>href="https://wa.me/55DDDNÚMERO?text=Oi! Vim do site da Comercial PVC"</code> com o número real de cada um.</div>
 </div>
 
 </body>

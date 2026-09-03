@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comercial PVC — Caruaru | Ripado, Forro PVC, Papel de Parede</title>
+<link rel="icon" type="image/png" href="images/logo-comercial-pvc.png">
+<link rel="apple-touch-icon" href="images/logo-comercial-pvc.png">
 <meta name="description" content="A maior variedade de ripado, forro PVC e papel de parede de Caruaru e região. Você mesma aplica, sem pedreiro. Loja física na Praça Pedro Victor, 03.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,7 +106,7 @@
     color:var(--gold-dark);background:var(--cream-2);border-radius:999px;
     padding:7px 16px;margin-bottom:20px;
   }
-  .kicker.on-dark{color:var(--gold);background:rgba(217,164,65,.14);}
+  .kicker.on-dark{color:var(--gold);background:rgba(228,24,31,.14);}
   .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-dark);}
   .kicker.on-dark::before{background:var(--gold);}
   h2{font-size:34px;font-weight:700;}
@@ -121,10 +123,11 @@
 
   /* ---- Top banner ---- */
   .todo-banner{
-    background:var(--gold);color:var(--ink);
+    background:var(--ink);color:var(--white);
     font-size:13px;text-align:center;padding:9px 16px;font-weight:600;
+    border-bottom:2px solid var(--gold);
   }
-  .todo-banner code{background:rgba(0,0,0,.12);padding:1px 6px;border-radius:4px;}
+  .todo-banner code{background:rgba(255,255,255,.14);padding:1px 6px;border-radius:4px;}
 
   /* ---- Nav (over hero) ---- */
   nav{
@@ -135,9 +138,13 @@
     max-width:1160px;margin:0 auto;padding:0 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .logo{font-family:'Sora',sans-serif;font-weight:700;font-size:19px;color:var(--white);
-    display:flex;align-items:center;gap:8px;}
-  .logo::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .logo-mark{
+    height:44px;width:44px;object-fit:contain;padding:5px;
+    border-radius:11px;background:var(--white);box-shadow:0 4px 14px rgba(0,0,0,.25);
+  }
+  .logo-word{font-family:'Sora',sans-serif;font-weight:700;font-size:18px;color:var(--white);letter-spacing:-.01em;}
+  .logo-word span{color:var(--gold);}
   .nav-links{display:flex;gap:32px;list-style:none;}
   .nav-links a{color:rgba(255,255,255,.85);font-size:14px;font-weight:500;text-decoration:none;}
   .nav-cta{
@@ -163,7 +170,7 @@
   }
   .hero-badge{
     display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
-    color:var(--gold);background:rgba(217,164,65,.16);border:1px solid rgba(217,164,65,.35);
+    color:var(--gold);background:rgba(228,24,31,.16);border:1px solid rgba(228,24,31,.35);
     border-radius:999px;padding:7px 16px;margin-bottom:22px;backdrop-filter:blur(6px);
   }
   .hero h1{
@@ -182,7 +189,7 @@
   }
   .hero-showcase-frame{
     position:relative;border-radius:24px;overflow:hidden;
-    box-shadow:0 24px 50px rgba(0,0,0,.45);border:2px solid rgba(217,164,65,.35);
+    box-shadow:0 24px 50px rgba(0,0,0,.45);border:2px solid rgba(228,24,31,.35);
     background:var(--ink-2);
   }
   .hero-showcase-img{
@@ -194,7 +201,7 @@
   }
   .hero-tag-floating-top{
     position:absolute;top:18px;left:18px;
-    background:rgba(28,26,23,.88);border:1px solid rgba(217,164,65,.4);
+    background:rgba(28,26,23,.88);border:1px solid rgba(228,24,31,.4);
     color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.04em;
     padding:8px 16px;border-radius:var(--radius-pill);backdrop-filter:blur(8px);
     display:flex;align-items:center;gap:8px;box-shadow:0 8px 16px rgba(0,0,0,.2);
@@ -223,15 +230,15 @@
   }
   .hero-floating-badge-side{
     position:absolute;bottom:-12px;right:-12px;
-    background:var(--gold);color:var(--ink);
+    background:var(--gold);color:var(--white);
     width:70px;height:70px;border-radius:50%;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     font-size:11px;font-weight:800;text-align:center;line-height:1.15;
-    box-shadow:0 10px 24px rgba(217,164,65,.4);border:3px solid var(--ink);
+    box-shadow:0 10px 24px rgba(228,24,31,.4);border:3px solid var(--ink);
     transform:rotate(8deg);
   }
   .btn-gold{
-    display:inline-block;background:var(--gold);color:var(--ink);
+    display:inline-block;background:var(--gold);color:var(--white);
     font-weight:700;font-size:15px;padding:16px 30px;border-radius:999px;
     text-decoration:none;border:none;cursor:pointer;
   }
@@ -290,7 +297,7 @@
   .stat-top{display:flex;justify-content:space-between;align-items:flex-start;}
   .stat-num{font-family:'Sora',sans-serif;font-size:30px;font-weight:700;}
   .stat-arrow{
-    width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--ink);
+    width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--white);
     display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;
   }
   .stat-card.light .stat-arrow{background:var(--ink);color:var(--gold);}
@@ -375,7 +382,7 @@
     display:flex;gap:10px;margin-top:18px;align-items:center;
   }
   .btn-prod-quote{
-    flex:1;background:var(--gold);color:var(--ink);font-weight:700;font-size:13px;
+    flex:1;background:var(--gold);color:var(--white);font-weight:700;font-size:13px;
     padding:12px 14px;border-radius:var(--radius-pill);border:none;cursor:pointer;
     text-align:center;text-decoration:none;transition:background .2s;
   }
@@ -437,14 +444,14 @@
   }
   .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;font-size:15px;color:var(--text-soft);}
   .faq-a p{padding-bottom:22px;max-width:640px;}
-  .faq-item.open .faq-q .icon{transform:rotate(45deg);background:var(--gold);color:var(--ink);}
+  .faq-item.open .faq-q .icon{transform:rotate(45deg);background:var(--gold);color:var(--white);}
 
   /* ---- CTA final ---- */
   .cta-final{
     position:relative;border-radius:28px;overflow:hidden;
     background:
-      linear-gradient(180deg, rgba(20,17,13,.55), rgba(20,17,13,.92)),
-      repeating-linear-gradient(115deg, #2c2620 0px, #2c2620 2px, #241f1a 2px, #241f1a 60px);
+      linear-gradient(180deg, rgba(20,17,17,.55), rgba(20,17,17,.92)),
+      repeating-linear-gradient(120deg, rgba(228,24,31,.16) 0px, rgba(228,24,31,.16) 2px, transparent 2px, transparent 46px), var(--ink);
     color:var(--white);padding:64px 48px;
     display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
   }
@@ -454,10 +461,10 @@
   .form-card label{display:block;font-size:13px;font-weight:600;margin:14px 0 6px;}
   .form-card input,.form-card select{
     width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:9px;
-    font-size:15px;font-family:inherit;background:var(--cream);
+    font-size:15px;font-family:inherit;background:var(--cream-2);
   }
   .form-card button{
-    width:100%;margin-top:22px;background:var(--gold);color:var(--ink);
+    width:100%;margin-top:22px;background:var(--gold);color:var(--white);
     border:none;padding:15px;border-radius:9px;font-weight:700;font-size:16px;cursor:pointer;
   }
   .form-card button:hover{background:var(--gold-dark);}
@@ -509,7 +516,10 @@
 <section class="hero">
   <nav>
     <div class="nav-inner">
-      <div class="logo">Comercial PVC</div>
+      <a class="logo" href="#" aria-label="Comercial PVC — página inicial">
+        <img class="logo-mark" src="images/logo-comercial-pvc.png" alt="Logo Comercial PVC">
+        <span class="logo-word">Comercial <span>PVC</span></span>
+      </a>
       <ul class="nav-links">
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>

@@ -1,0 +1,6 @@
+{
+  "name": "comercial-pvc-lp",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page estatica da Comercial PVC + funcao serverless para a Meta Conversion API."
+}

@@ -5,3 +5,8 @@ server.log
 # OS generated
 .DS_Store
 Thumbs.db
+
+# Segredos locais (nunca comitar o token da Conversion API)
+.env
+.env.local
+.vercel

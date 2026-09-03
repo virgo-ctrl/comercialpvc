@@ -6,21 +6,21 @@
 */
 
 :root{
-  /* ---- Cor: base ---- */
-  --ink:#1C1A17;         /* texto principal / fundo de seções escuras */
-  --ink-2:#2A2620;       /* fundo escuro secundário (rodapé, cards escuros) */
-  --cream:#F7F3EC;       /* fundo padrão claro */
-  --cream-2:#EFE6D4;     /* fundo claro alternado / cards claros */
-  --line:#E4DACB;        /* bordas e divisores sobre fundo claro */
+  /* ---- Cor: base (paleta oficial Comercial PVC — preto, vermelho e branco) ---- */
+  --ink:#141111;         /* texto principal / fundo de seções escuras (preto da marca) */
+  --ink-2:#1E1A1A;       /* fundo escuro secundário (rodapé, cards escuros) */
+  --cream:#FFFFFF;       /* fundo padrão claro (branco da marca) */
+  --cream-2:#F5F1F0;     /* fundo claro alternado / cards claros */
+  --line:#E9E4E2;        /* bordas e divisores sobre fundo claro */
 
   /* ---- Cor: acento ---- */
-  --gold:#D9A441;        /* CTA, destaque de texto, ícones sobre fundo escuro */
-  --gold-dark:#B9862E;   /* hover de CTA, destaque de texto sobre fundo claro */
+  --gold:#E4181F;        /* CTA, destaque de texto, ícones sobre fundo escuro (vermelho da marca) */
+  --gold-dark:#B4121A;   /* hover de CTA, destaque de texto sobre fundo claro */
 
   /* ---- Cor: texto ---- */
   --white:#FFFFFF;
-  --text-soft:#6B6259;              /* texto secundário sobre fundo claro */
-  --text-soft-light:rgba(247,243,236,.72); /* texto secundário sobre fundo escuro */
+  --text-soft:#6E6866;              /* texto secundário sobre fundo claro */
+  --text-soft-light:rgba(255,255,255,.72); /* texto secundário sobre fundo escuro */
 
   /* ---- Tipografia ---- */
   --font-display:'Sora', system-ui, sans-serif;   /* títulos, headlines, números */

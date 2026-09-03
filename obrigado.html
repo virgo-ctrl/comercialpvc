@@ -9,65 +9,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tokens.css">
 <style>
+  :root{
+    /* Paleta da marca Comercial PVC — aplicada localmente nesta página */
+    --pvc-black:#141111;
+    --pvc-black-2:#1E1A1A;
+    --pvc-red:#E4181F;
+    --pvc-red-dark:#B4121A;
+    --pvc-white:#FFFFFF;
+    --pvc-gray:#6E6866;
+    --pvc-line:#E9E4E2;
+    --pvc-surface:#FBF9F8;
+  }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--pvc-black);background:var(--pvc-white);line-height:1.6;}
+
   .top{
+    position:relative;
     background:
-      linear-gradient(180deg, rgba(20,17,13,.5), rgba(20,17,13,.92)),
-      repeating-linear-gradient(115deg, #2c2620 0px, #2c2620 2px, #241f1a 2px, #241f1a 60px);
-    color:var(--white);padding:64px 24px 72px;text-align:center;
+      linear-gradient(180deg, var(--pvc-black) 0%, var(--pvc-black-2) 100%);
+    color:var(--pvc-white);padding:56px 24px 76px;text-align:center;overflow:hidden;
   }
-  .logo{font-family:'Sora',sans-serif;font-weight:700;font-size:18px;display:inline-flex;align-items:center;gap:8px;margin-bottom:28px;text-decoration:none;color:var(--white);}
-  .logo::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .top::before{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(120deg, rgba(228,24,31,.14) 0px, rgba(228,24,31,.14) 2px, transparent 2px, transparent 46px);
+    pointer-events:none;
+  }
+  .top::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:6px;
+    background:linear-gradient(90deg, var(--pvc-red), var(--pvc-red-dark));
+  }
+  .top-inner{position:relative;z-index:1;}
+  .logo-badge{
+    display:inline-flex;margin-bottom:24px;background:var(--pvc-white);border-radius:16px;
+    padding:10px 18px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .logo-badge img{height:44px;display:block;}
   .check{
-    width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--ink);
-    display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 20px;
+    width:60px;height:60px;border-radius:50%;background:var(--pvc-red);color:var(--pvc-white);
+    display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;margin:0 auto 20px;
+    box-shadow:0 8px 22px rgba(228,24,31,.45);
   }
-  h1{font-family:'Sora',sans-serif;font-size:32px;margin-bottom:12px;}
-  .top p{color:var(--text-soft-light);font-size:16px;max-width:460px;margin:0 auto;}
+  h1{font-family:'Sora',sans-serif;font-size:32px;margin-bottom:12px;letter-spacing:-0.01em;}
+  .top p{color:rgba(255,255,255,.72);font-size:16px;max-width:460px;margin:0 auto;}
 
   .container{max-width:640px;margin:0 auto;padding:56px 24px 80px;}
   .kicker{
-    display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
-    color:var(--gold-dark);background:var(--cream-2);border-radius:999px;padding:7px 16px;margin-bottom:16px;
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;
+    color:var(--pvc-red);background:rgba(228,24,31,.08);border-radius:999px;padding:7px 16px;margin-bottom:16px;
   }
-  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-dark);}
-  h2{font-family:'Sora',sans-serif;font-size:22px;margin-bottom:8px;}
-  .container > p.intro{color:var(--text-soft);font-size:15px;margin-bottom:28px;}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pvc-red);}
+  h2{font-family:'Sora',sans-serif;font-size:22px;margin-bottom:8px;color:var(--pvc-black);}
+  .container > p.intro{color:var(--pvc-gray);font-size:15px;margin-bottom:28px;}
 
   .vendedores{display:flex;flex-direction:column;gap:12px;}
   .vendedor-btn{
     display:flex;align-items:center;justify-content:space-between;gap:12px;
-    background:var(--white);border:1px solid var(--line);border-radius:14px;
-    padding:16px 20px;text-decoration:none;color:var(--ink);
+    background:var(--pvc-surface);border:1px solid var(--pvc-line);border-radius:14px;
+    padding:16px 20px;text-decoration:none;color:var(--pvc-black);
+    transition:border-color .15s ease, box-shadow .15s ease;
   }
-  .vendedor-btn:hover{border-color:var(--gold);}
+  .vendedor-btn:hover{border-color:var(--pvc-red);box-shadow:0 6px 18px rgba(228,24,31,.12);}
   .vendedor-left{display:flex;align-items:center;gap:14px;}
   .vendedor-avatar{
-    width:48px;height:48px;border-radius:50%;background:var(--cream-2);
-    display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text-soft);flex-shrink:0;
-    overflow:hidden;
+    width:48px;height:48px;border-radius:50%;background:var(--pvc-white);
+    display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--pvc-gray);flex-shrink:0;
+    overflow:hidden;border:2px solid var(--pvc-red);
   }
   .vendedor-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
-  .vendedor-name{font-family:'Sora',sans-serif;font-weight:600;font-size:15px;display:block;}
-  .vendedor-role{font-size:13px;color:var(--text-soft);}
+  .vendedor-name{font-family:'Sora',sans-serif;font-weight:600;font-size:15px;display:block;color:var(--pvc-black);}
+  .vendedor-role{font-size:13px;color:var(--pvc-gray);}
   .wa-pill{
-    background:#25D366;color:white;border-radius:999px;padding:9px 16px;
+    background:var(--pvc-red);color:var(--pvc-white);border-radius:999px;padding:9px 16px;
     font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;white-space:nowrap;
   }
 
-  .back{display:block;text-align:center;margin-top:36px;font-size:14px;font-weight:600;color:var(--text-soft);text-decoration:none;}
-
-  .note{background:#FFF4E0;border:1px solid #EBC178;color:#7A4A0C;border-radius:10px;padding:14px 18px;font-size:13px;margin-top:40px;}
+  .back{display:block;text-align:center;margin-top:36px;font-size:14px;font-weight:600;color:var(--pvc-gray);text-decoration:none;}
+  .back:hover{color:var(--pvc-red);}
 </style>
 </head>
 <body>
 
 <div class="top">
-  <a class="logo" href="index.html">Comercial PVC</a>
-  <div class="check">✓</div>
-  <h1>Recebemos o seu contato!</h1>
-  <p>Escolha abaixo com quem você quer falar agora — qualquer um da equipe pode te ajudar a escolher o material certo.</p>
+  <div class="top-inner">
+    <a class="logo-badge" href="index.html">
+      <img src="images/logo-comercial-pvc.png" alt="Comercial PVC">
+    </a>
+    <div class="check">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5 13L9.5 17.5L19 7" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1>Recebemos o seu contato!</h1>
+    <p>Escolha abaixo com quem você quer falar agora — qualquer um da equipe pode te ajudar a escolher o material certo.</p>
+  </div>
 </div>
 
 <div class="container">
@@ -81,7 +115,7 @@
         <span class="vendedor-avatar"><img src="images/vendedora-andrea.png" alt="Foto de Andrea"></span>
         <span><span class="vendedor-name">Andrea</span><span class="vendedor-role">Vendedora</span></span>
       </span>
-      <span class="wa-pill">💬 WhatsApp</span>
+      <span class="wa-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.2-1.77 1.27-.45.07-1.02.1-1.65-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.93.92-2.2c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.46-.09.18-.14.29-.27.44-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.71 1.17 1.53 1.9 1.06.94 1.95 1.23 2.22 1.37.27.13.43.11.59-.06.16-.16.65-.75.83-1 .17-.27.35-.22.58-.13.24.09 1.52.72 1.78.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>WhatsApp</span>
     </a>
 
     <a class="vendedor-btn" href="https://wa.me/5581981851293?text=Oi%2C%20Lucas!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
@@ -89,7 +123,7 @@
         <span class="vendedor-avatar"><img src="images/vendedor-lucas.png" alt="Foto de Lucas"></span>
         <span><span class="vendedor-name">Lucas</span><span class="vendedor-role">Vendedor</span></span>
       </span>
-      <span class="wa-pill">💬 WhatsApp</span>
+      <span class="wa-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.2-1.77 1.27-.45.07-1.02.1-1.65-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.93.92-2.2c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.46-.09.18-.14.29-.27.44-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.71 1.17 1.53 1.9 1.06.94 1.95 1.23 2.22 1.37.27.13.43.11.59-.06.16-.16.65-.75.83-1 .17-.27.35-.22.58-.13.24.09 1.52.72 1.78.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>WhatsApp</span>
     </a>
 
     <a class="vendedor-btn" href="https://wa.me/5581995551114?text=Oi%2C%20Karol!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
@@ -97,7 +131,7 @@
         <span class="vendedor-avatar"><img src="images/vendedora-karol.png" alt="Foto de Karol"></span>
         <span><span class="vendedor-name">Karol</span><span class="vendedor-role">Vendedora</span></span>
       </span>
-      <span class="wa-pill">💬 WhatsApp</span>
+      <span class="wa-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.2-1.77 1.27-.45.07-1.02.1-1.65-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.93.92-2.2c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.46-.09.18-.14.29-.27.44-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.71 1.17 1.53 1.9 1.06.94 1.95 1.23 2.22 1.37.27.13.43.11.59-.06.16-.16.65-.75.83-1 .17-.27.35-.22.58-.13.24.09 1.52.72 1.78.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>WhatsApp</span>
     </a>
 
     <a class="vendedor-btn" href="https://wa.me/5581981713559?text=Oi%2C%20Jaciel!%20Preenchi%20o%20formul%C3%A1rio%20no%20site%20da%20Comercial%20PVC%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">
@@ -105,7 +139,7 @@
         <span class="vendedor-avatar"><img src="images/vendedor-jaciel.png" alt="Foto de Jaciel"></span>
         <span><span class="vendedor-name">Jaciel</span><span class="vendedor-role">Vendedor</span></span>
       </span>
-      <span class="wa-pill">💬 WhatsApp</span>
+      <span class="wa-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.29 1.2-1.77 1.27-.45.07-1.02.1-1.65-.1-.38-.12-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.93.92-2.2c.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.46-.09.18-.14.29-.27.44-.13.16-.28.35-.4.47-.13.13-.27.27-.12.53.16.27.71 1.17 1.53 1.9 1.06.94 1.95 1.23 2.22 1.37.27.13.43.11.59-.06.16-.16.65-.75.83-1 .17-.27.35-.22.58-.13.24.09 1.52.72 1.78.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>WhatsApp</span>
     </a>
   </div>
 

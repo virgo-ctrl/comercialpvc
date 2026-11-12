@@ -2,6 +2,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /style-guide
 Disallow: /style-guide.html
 
 # Bots de IA (Answer/Generative Engine Optimization) — liberados de propósito

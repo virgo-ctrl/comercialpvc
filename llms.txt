@@ -29,8 +29,8 @@ Domínio placeholder (comercialpvc.com.br) — atualizar este arquivo com o dom�
 ## Páginas principais
 
 - Home / landing page de produtos: /
-- Política de privacidade: /privacidade.html
-- Termos e condições: /termos.html
+- Política de privacidade: /privacidade
+- Termos e condições: /termos
 
 ## Contato
 
